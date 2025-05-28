@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 216 33% 95%; /* Light Gray #F0F4F8 */
+    --foreground: 223 25% 25%; /* Dark Slate Blue for text */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 223 25% 25%; /* Dark Slate Blue */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 223 25% 25%;
+
+    --primary: 223 41% 61%; /* Slate Blue #6A89CC */
+    --primary-foreground: 216 33% 98%; /* Light Gray for text on primary */
+
+    --secondary: 223 30% 80%; /* Lighter Slate Blue */
+    --secondary-foreground: 223 25% 25%; /* Dark Slate Blue */
+
+    --muted: 223 30% 88%; /* Very Light Slate Blue / Gray */
+    --muted-foreground: 223 25% 45%; /* Medium Slate Blue */
+
+    --accent: 260 44% 76%; /* Soft Lavender #B39DDB */
+    --accent-foreground: 0 0% 100%; /* White for text on accent */
+
+    --destructive: 0 72% 51%; /* Adjusted Red */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 223 20% 80%; /* Subtle Slate Blue Border */
+    --input: 223 20% 80%; /* Subtle Slate Blue Input Border */
+    --ring: 260 44% 76%; /* Soft Lavender for focus rings */
+
+    --radius: 0.5rem;
+
+    --chart-1: 223 41% 61%;
+    --chart-2: 260 44% 76%;
+    --chart-3: 223 50% 70%;
+    --chart-4: 260 50% 80%;
+    --chart-5: 223 30% 50%;
+
+    /* Sidebar specific colors - can be adjusted if sidebar is themed differently */
+    --sidebar-background: 223 30% 90%; /* Slightly darker than main background or distinct */
+    --sidebar-foreground: 223 25% 20%;
+    --sidebar-primary: 223 41% 55%; /* Darker primary for sidebar emphasis */
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 260 44% 70%; /* Slightly darker accent */
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 223 20% 75%;
+    --sidebar-ring: 260 44% 76%;
+  }
+
+  .dark {
+    --background: 223 20% 10%; /* Dark Slate Blue */
+    --foreground: 216 20% 90%; /* Light Gray/Off-white */
+
+    --card: 223 20% 15%; /* Slightly lighter than dark background */
+    --card-foreground: 216 20% 90%;
+
+    --popover: 223 20% 10%;
+    --popover-foreground: 216 20% 90%;
+
+    --primary: 223 50% 70%; /* Lighter, vibrant Slate Blue */
+    --primary-foreground: 223 20% 10%; /* Dark background color */
+
+    --secondary: 223 25% 30%; /* Darker secondary */
+    --secondary-foreground: 216 20% 90%;
+
+    --muted: 223 20% 25%; /* Dark muted */
+    --muted-foreground: 216 20% 65%;
+
+    --accent: 260 50% 80%; /* Lighter Lavender */
+    --accent-foreground: 223 20% 10%; /* Dark background color */
+    
+    --destructive: 0 63% 40%; /* Adjusted Dark Red */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 223 20% 25%;
+    --input: 223 20% 25%;
+    --ring: 260 50% 80%;
+
+    /* Dark Sidebar specific colors */
+    --sidebar-background: 223 20% 8%;
+    --sidebar-foreground: 216 20% 85%;
+    --sidebar-primary: 223 50% 65%;
+    --sidebar-primary-foreground: 223 20% 5%;
+    --sidebar-accent: 260 50% 75%;
+    --sidebar-accent-foreground: 223 20% 5%;
+    --sidebar-border: 223 20% 20%;
+    --sidebar-ring: 260 50% 80%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1; /* Enable common ligatures and contextual alternates */
+  }
+}
